@@ -1,30 +1,15 @@
-﻿========================================================================
-    控制台应用程序：contrastHist 项目概述
-========================================================================
-
-应用程序向导已为您创建了此 contrastHist 应用程序。
-
-本文件概要介绍组成 contrastHist 应用程序的每个文件的内容。
-
-
-contrastHist.vcxproj
-    这是使用应用程序向导生成的 VC++ 项目的主项目文件，其中包含生成该文件的 Visual C++ 的版本信息，以及有关使用应用程序向导选择的平台、配置和项目功能的信息。
-
-contrastHist.vcxproj.filters
-    这是使用“应用程序向导”生成的 VC++ 项目筛选器文件。它包含有关项目文件与筛选器之间的关联信息。在 IDE 中，通过这种关联，在特定节点下以分组形式显示具有相似扩展名的文件。例如，“.cpp”文件与“源文件”筛选器关联。
-
-contrastHist.cpp
-    这是主应用程序源文件。
-
-/////////////////////////////////////////////////////////////////////////////
-其他标准文件:
-
-StdAfx.h, StdAfx.cpp
-    这些文件用于生成名为 contrastHist.pch 的预编译头 (PCH) 文件和名为 StdAfx.obj 的预编译类型文件。
-
-/////////////////////////////////////////////////////////////////////////////
-其他注释:
-
-应用程序向导使用“TODO:”注释来指示应添加或自定义的源代码部分。
-
-/////////////////////////////////////////////////////////////////////////////
+﻿复原了上面描述的多种直方图均衡算法（图像增强算法）用于和我的算法做对比，参考的文章在注释里面有。我自己写的还没传上来。不会用GitHub，传的乱七八糟
+复原的文献如下：
+//Contrast enhancement using brightness preserving bi-histogram equalization	3
+void BBHE(Mat src, Mat& dst);
+//Image enhancement based on equal area dualistic sub-image histogram equalization method	  4
+void DSIHE(Mat src, Mat& dst);
+//2010-Modified histogram equalization for image contrast enhancement	9
+void HEwVED(Mat src, Mat& dst, double a);
+void HEwVED(Mat src, Mat& dst, int a);
+//Contrast enhancement using recursive mean-separate histogram equalization for scalable brightness preservation	6
+void RMSHE(Mat src, Mat& dst, int iterator_s);
+//Recursive sub-image histogram equalization applied to gray scale images	7
+void RSIHE(Mat src, Mat& dst, int iterator_s);
+//2016-Contrast Enhancement using Entropy based Dynamic Sub-Histogram Equalization
+void EDSHE(Mat src, Mat& dst);
